@@ -1,6 +1,7 @@
+````markdown
 <div align="center">
 
-# SkillBridge
+# CareerPilot
 **AI-Powered Resume Analyzer & Job Recommendation Platform**
 
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
@@ -15,15 +16,15 @@
 
 ## Overview
 
-SkillBridge is a full-stack MERN application that analyzes resumes using AI, matches users with relevant job listings, identifies skill gaps, and generates personalized learning roadmaps — all in one platform.
+CareerPilot is a full-stack MERN application that analyzes resumes using AI, matches users with relevant job listings, identifies skill gaps, and generates personalized learning roadmaps — all in one platform.
 
-![Landing Page](https://raw.githubusercontent.com/mrjfsd/SkillBridge/main/assets/Screenshots/landing%20Page.png)
+![Landing Page](https://raw.githubusercontent.com/Muhammed23B/CareerPilot/main/assets/Screenshots/landing%20Page.png)
 
 ---
 
 ## Features
 
-![Features](https://raw.githubusercontent.com/mrjfsd/SkillBridge/main/assets/Screenshots/features.png)
+![Features](https://raw.githubusercontent.com/Muhammed23B/CareerPilot/main/assets/Screenshots/features.png)
 
 - **AI Resume Analysis** — Upload a PDF and extract skills, experience, and education automatically
 - **Job Matching** — Real-time job listings via JSearch API, ranked by AI match score
@@ -36,7 +37,7 @@ SkillBridge is a full-stack MERN application that analyzes resumes using AI, mat
 
 ## Resume Dashboard
 
-![Dashboard](https://raw.githubusercontent.com/mrjfsd/SkillBridge/main/assets/Screenshots/dashboard.png)
+![Dashboard](https://raw.githubusercontent.com/Muhammed23B/CareerPilot/main/assets/Screenshots/dashboard.png)
 
 Create a new resume from scratch with AI assistance or upload an existing PDF for automatic parsing. Uploaded resumes are listed with quick actions to Edit, Find Jobs, Rename, or Delete.
 
@@ -44,17 +45,17 @@ Create a new resume from scratch with AI assistance or upload an existing PDF fo
 
 ## Job Recommendations
 
-![Job Search](https://raw.githubusercontent.com/mrjfsd/SkillBridge/main/assets/Screenshots/job-search.png)
+![Job Search](https://raw.githubusercontent.com/Muhammed23B/CareerPilot/main/assets/Screenshots/job-search.png)
 
-After parsing your resume, SkillBridge queries the **JSearch API** in real-time to fetch live job listings from across the web — including LinkedIn, Indeed, and other major job boards. Each listing is then scored by **Gemini AI** against your resume's extracted skills and experience. Jobs are ranked by relevance so the most suitable opportunities appear first. Use **Check Match** on any listing for a detailed breakdown of how well your profile fits that role.
+After parsing your resume, CareerPilot queries the **JSearch API** in real-time to fetch live job listings from across the web — including LinkedIn, Indeed, and other major job boards. Each listing is then scored by **Gemini AI** against your resume's extracted skills and experience. Jobs are ranked by relevance so the most suitable opportunities appear first. Use **Check Match** on any listing for a detailed breakdown of how well your profile fits that role.
 
 ---
 
 ## Skill Gap Analysis
 
-![Skill Gap](https://raw.githubusercontent.com/mrjfsd/SkillBridge/main/assets/Screenshots/skill-gap.png)
+![Skill Gap](https://raw.githubusercontent.com/Muhammed23B/CareerPilot/main/assets/Screenshots/skill-gap.png)
 
-For any job listing, SkillBridge compares your resume's skills against the job requirements and shows a match score. Missing skills are clearly highlighted, and Gemini AI generates a personalized **4-week learning roadmap** with curated resources to help you close those gaps efficiently.
+For any job listing, CareerPilot compares your resume's skills against the job requirements and shows a match score. Missing skills are clearly highlighted, and Gemini AI generates a personalized **4-week learning roadmap** with curated resources to help you close those gaps efficiently.
 
 ---
 
@@ -85,17 +86,19 @@ For any job listing, SkillBridge compares your resume's skills against the job r
 
 **1. Clone the repository**
 ```bash
-git clone https://github.com/mrjfsd/SkillBridge.git
-cd SkillBridge
-```
+git clone https://github.com/Muhammed23B/CareerPilot.git
+cd CareerPilot
+````
 
 **2. Setup the server**
+
 ```bash
 cd server
 npm install
 ```
 
 Create a `.env` file inside `server/`:
+
 ```env
 PORT=5000
 MONGODB_URI=your_mongodb_connection_string
@@ -106,11 +109,13 @@ IMAGEKIT_PRIVATE_KEY=your_imagekit_key
 ```
 
 Start the server:
+
 ```bash
 node server.js
 ```
 
 **3. Setup the client**
+
 ```bash
 cd ../client
 npm install
@@ -123,8 +128,8 @@ App runs at `http://localhost:5173`
 
 ## Project Structure
 
-```
-SkillBridge/
+```text
+CareerPilot/
 ├── assets/
 │   └── Screenshots/
 ├── client/                 # React frontend (Vite)
@@ -142,3 +147,13 @@ SkillBridge/
 ```
 
 ---
+
+## Author
+
+**Mohammed Bilal Ulla Shariff**
+
+* GitHub: https://github.com/Muhammed23B
+* LinkedIn: https://www.linkedin.com/in/mohammed-bilal-ulla-shariff
+
+```
+```
