@@ -1,4 +1,4 @@
-````markdown
+
 <div align="center">
 
 # CareerPilot
@@ -148,12 +148,4 @@ CareerPilot/
 
 ---
 
-## Author
 
-**Mohammed Bilal Ulla Shariff**
-
-* GitHub: https://github.com/Muhammed23B
-* LinkedIn: https://www.linkedin.com/in/mohammed-bilal-ulla-shariff
-
-```
-```
