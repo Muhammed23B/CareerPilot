@@ -1,125 +1,136 @@
 <div align="center">
 
-🚀 CareerPilot
-AI-Powered Resume Analyzer & Career Recommendation Platform
+# SkillBridge
+**AI-Powered Resume Analyzer & Job Recommendation Platform**
 
-
-
-
-
-
-
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://mongodb.com/)
+[![Gemini](https://img.shields.io/badge/Gemini_AI-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/)
 
 </div>
 
-📌 Overview
+---
 
-CareerPilot is a full-stack MERN application that leverages Artificial Intelligence to analyze resumes, recommend relevant job opportunities, identify skill gaps, and generate personalized learning roadmaps. The platform helps students, fresh graduates, and professionals make informed career decisions and improve their employability through AI-driven insights.
+## Overview
 
+SkillBridge is a full-stack MERN application that analyzes resumes using AI, matches users with relevant job listings, identifies skill gaps, and generates personalized learning roadmaps — all in one platform.
 
+![Landing Page](https://raw.githubusercontent.com/mrjfsd/SkillBridge/main/assets/Screenshots/landing%20Page.png)
 
+---
 
-✨ Features
+## Features
 
+![Features](https://raw.githubusercontent.com/mrjfsd/SkillBridge/main/assets/Screenshots/features.png)
 
+- **AI Resume Analysis** — Upload a PDF and extract skills, experience, and education automatically
+- **Job Matching** — Real-time job listings via JSearch API, ranked by AI match score
+- **Skill Gap Detection** — Side-by-side comparison of your skills vs job requirements
+- **Learning Roadmap** — AI-generated 4-week plan with curated courses per missing skill
+- **AI Resume Enhancement** — Gemini AI rewrites and optimizes your resume for ATS compatibility
+- **PDF Export** — Download your analyzed report and improved resume
 
+---
 
-AI Resume Analysis — Upload a PDF resume and automatically extract skills, education, projects, and experience.
-Job Matching — Discover relevant job opportunities ranked using AI-powered match scoring.
-Skill Gap Detection — Compare your current skills against job requirements and identify missing competencies.
-Learning Roadmap Generation — Receive personalized learning plans with curated resources to bridge skill gaps.
-AI Resume Enhancement — Optimize and improve resumes for ATS compatibility using Gemini AI.
-PDF Export — Download analyzed reports and enhanced resumes.
-Secure Authentication — JWT-based login and registration system.
-Modern Dashboard — Manage resumes, job recommendations, and career insights from one place.
-📊 Resume Dashboard
+## Resume Dashboard
 
+![Dashboard](https://raw.githubusercontent.com/mrjfsd/SkillBridge/main/assets/Screenshots/dashboard.png)
 
+Create a new resume from scratch with AI assistance or upload an existing PDF for automatic parsing. Uploaded resumes are listed with quick actions to Edit, Find Jobs, Rename, or Delete.
 
+---
 
-Create a new resume from scratch or upload an existing resume for automatic parsing and analysis. Manage resumes efficiently with quick actions such as editing, renaming, deleting, and job matching.
+## Job Recommendations
 
-🎯 Job Recommendations
+![Job Search](https://raw.githubusercontent.com/mrjfsd/SkillBridge/main/assets/Screenshots/job-search.png)
 
+After parsing your resume, SkillBridge queries the **JSearch API** in real-time to fetch live job listings from across the web — including LinkedIn, Indeed, and other major job boards. Each listing is then scored by **Gemini AI** against your resume's extracted skills and experience. Jobs are ranked by relevance so the most suitable opportunities appear first. Use **Check Match** on any listing for a detailed breakdown of how well your profile fits that role.
 
+---
 
+## Skill Gap Analysis
 
-CareerPilot fetches real-time job opportunities and intelligently evaluates them against your resume profile. Using Gemini AI, each opportunity is scored based on your skills, experience, and qualifications, ensuring that the most relevant roles appear first.
+![Skill Gap](https://raw.githubusercontent.com/mrjfsd/SkillBridge/main/assets/Screenshots/skill-gap.png)
 
-📈 Skill Gap Analysis
+For any job listing, SkillBridge compares your resume's skills against the job requirements and shows a match score. Missing skills are clearly highlighted, and Gemini AI generates a personalized **4-week learning roadmap** with curated resources to help you close those gaps efficiently.
 
+---
 
+## Tech Stack
 
+| Layer | Technologies |
+|-------|-------------|
+| Frontend | React.js, Vite, CSS3 |
+| Backend | Node.js, Express.js |
+| Database | MongoDB Atlas |
+| AI | Gemini 2.5 Flash (via OpenAI-compatible API) |
+| Job Data | JSearch API (RapidAPI) |
+| Media | ImageKit |
+| Auth | JWT, bcrypt |
 
-The platform compares your resume with job requirements to identify missing skills and competencies. Based on these gaps, CareerPilot generates personalized learning recommendations and structured roadmaps to accelerate your career growth.
+---
 
-🛠️ Tech Stack
-Layer	Technologies
-Frontend	React.js, Vite, CSS3
-Backend	Node.js, Express.js
-Database	MongoDB Atlas
-AI	Google Gemini AI
-Authentication	JWT, bcrypt
-Media Storage	ImageKit
-APIs	JSearch API
-🚀 Getting Started
-Prerequisites
-Node.js v18+
-MongoDB Atlas Account
-Google Gemini API Key
-JSearch API Key
-ImageKit Account
-Installation
-1️⃣ Clone the Repository
-git clone https://github.com/Muhammed23B/CareerPilot.git
-cd CareerPilot
-2️⃣ Backend Setup
+## Getting Started
+
+### Prerequisites
+
+- Node.js v18+
+- MongoDB Atlas account
+- Gemini API key
+- JSearch API key (RapidAPI)
+
+### Installation
+
+**1. Clone the repository**
+```bash
+git clone https://github.com/mrjfsd/SkillBridge.git
+cd SkillBridge
+```
+
+**2. Setup the server**
+```bash
 cd server
 npm install
+```
 
-Create a .env file inside the server directory:
-
+Create a `.env` file inside `server/`:
+```env
 PORT=5000
-
 MONGODB_URI=your_mongodb_connection_string
-
 JWT_SECRET=your_jwt_secret
-
 GEMINI_API_KEY=your_gemini_api_key
-
 JSEARCH_API_KEY=your_jsearch_api_key
+IMAGEKIT_PRIVATE_KEY=your_imagekit_key
+```
 
-IMAGEKIT_PRIVATE_KEY=your_imagekit_private_key
-IMAGEKIT_PUBLIC_KEY=your_imagekit_public_key
-IMAGEKIT_URL_ENDPOINT=your_imagekit_url_endpoint
+Start the server:
+```bash
+node server.js
+```
 
-Start the backend server:
-
-npm run dev
-3️⃣ Frontend Setup
+**3. Setup the client**
+```bash
 cd ../client
 npm install
 npm run dev
+```
 
-Application will run at:
+App runs at `http://localhost:5173`
 
-http://localhost:5173
-📂 Project Structure
-CareerPilot/
+---
+
+## Project Structure
+
+```
+SkillBridge/
 ├── assets/
 │   └── Screenshots/
-│
-├── client/
-│   ├── src/
-│   │   ├── assets/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── app/
-│   │   └── configs/
-│   │
-│   └── package.json
-│
-├── server/
+├── client/                 # React frontend (Vite)
+│   └── src/
+│       └── components/
+├── server/                 # Node.js backend
 │   ├── configs/
 │   ├── controllers/
 │   ├── middlewares/
@@ -127,41 +138,7 @@ CareerPilot/
 │   ├── routes/
 │   ├── services/
 │   └── server.js
-│
 └── README.md
-🎨 Key Highlights
-AI Resume Analysis
-Resume Enhancement using Gemini AI
-Job Recommendation Engine
-Skill Gap Detection
-Personalized Learning Roadmaps
-Secure User Authentication
-Real-Time Career Insights
-Modern and Responsive UI
-🎯 Use Cases
-Students preparing for placements
-Fresh graduates entering the workforce
-Professionals planning career transitions
-Individuals seeking AI-powered career guidance
-Users looking to improve ATS compatibility
-🔮 Future Enhancements
-ATS Resume Scoring
-AI Cover Letter Generator
-LinkedIn Profile Analysis
-Mock Interview Assistant
-Job Application Tracking
-Advanced Career Analytics
-Personalized Interview Preparation
-👨‍💻 Author
-Mohammed Bilal Ulla Shariff
-🎓 B.E. Computer Science Engineering (AI & ML)
-🏫 The National Institute of Engineering, Mysuru
-💻 Full Stack Developer | AI/ML Engineer
-Connect With Me
-GitHub: https://github.com/Muhammed23B
-LinkedIn: https://www.linkedin.com/in/mohammed-bilal-ulla-shariff
-⭐ Support
+```
 
-If you found this project useful, consider giving it a ⭐ on GitHub and sharing it with others.
-
-CareerPilot — Empowering Careers Through AI 🚀
+---
