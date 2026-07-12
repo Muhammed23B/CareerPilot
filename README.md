@@ -1,172 +1,84 @@
-# 🚀 CareerPilot – AI-Powered Career Development Platform
+<div align="center">
 
-CareerPilot is an intelligent career guidance platform that helps users build professional resumes, analyze skill gaps, discover relevant job opportunities, and receive AI-powered career recommendations.
+🚀 CareerPilot
+AI-Powered Resume Analyzer & Career Recommendation Platform
 
-The platform combines modern web technologies with Generative AI to provide personalized career insights and help users make informed career decisions.
 
----
 
-## ✨ Features
 
-### 📝 AI Resume Builder
-- Create professional resumes using multiple templates
-- Live resume preview
-- Download-ready resume formats
-- Customizable themes and layouts
 
-### 🎯 Job Matching System
-- Match resumes with job requirements
-- Analyze resume-job compatibility
-- Detailed match score and insights
 
-### 🧠 AI Career Recommendations
-- Personalized career suggestions
-- AI-generated improvement recommendations
-- Career growth guidance
 
-### 📊 Skill Gap Analysis
-- Identify missing skills for target roles
-- Compare current skills with industry requirements
-- Personalized upskilling suggestions
 
-### 🛣️ Learning Roadmaps
-- AI-generated learning paths
-- Recommended technologies and courses
-- Structured career progression plans
+</div>
 
-### 🔐 User Authentication
-- Secure registration and login
-- JWT-based authentication
-- Protected user data and resumes
+📌 Overview
 
----
+CareerPilot is a full-stack MERN application that leverages Artificial Intelligence to analyze resumes, recommend relevant job opportunities, identify skill gaps, and generate personalized learning roadmaps. The platform helps students, fresh graduates, and professionals make informed career decisions and improve their employability through AI-driven insights.
 
-## 🏗️ System Architecture
 
-```text
-Frontend (React + Vite)
-          │
-          ▼
-REST APIs
-          │
-          ▼
-Backend (Node.js + Express)
-          │
- ┌────────┼────────┐
- │        │        │
- ▼        ▼        ▼
-MongoDB  Gemini AI  External Services
-```
 
----
 
-## 🛠️ Tech Stack
+✨ Features
 
-### Frontend
-- React.js
-- Vite
-- Redux Toolkit
-- React Router
-- CSS
 
-### Backend
-- Node.js
-- Express.js
 
-### Database
-- MongoDB
-- Mongoose
 
-### AI Integration
-- Google Gemini AI
+AI Resume Analysis — Upload a PDF resume and automatically extract skills, education, projects, and experience.
+Job Matching — Discover relevant job opportunities ranked using AI-powered match scoring.
+Skill Gap Detection — Compare your current skills against job requirements and identify missing competencies.
+Learning Roadmap Generation — Receive personalized learning plans with curated resources to bridge skill gaps.
+AI Resume Enhancement — Optimize and improve resumes for ATS compatibility using Gemini AI.
+PDF Export — Download analyzed reports and enhanced resumes.
+Secure Authentication — JWT-based login and registration system.
+Modern Dashboard — Manage resumes, job recommendations, and career insights from one place.
+📊 Resume Dashboard
 
-### Authentication
-- JWT (JSON Web Token)
-- bcrypt
 
-### File Handling
-- Multer
-- ImageKit
 
----
 
-## 📂 Project Structure
+Create a new resume from scratch or upload an existing resume for automatic parsing and analysis. Manage resumes efficiently with quick actions such as editing, renaming, deleting, and job matching.
 
-```text
-CareerPilot/
-│
-├── client/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── app/
-│   │   ├── assets/
-│   │   └── configs/
-│   │
-│   └── package.json
-│
-├── server/
-│   ├── controllers/
-│   ├── routes/
-│   ├── models/
-│   ├── middlewares/
-│   ├── services/
-│   ├── configs/
-│   └── server.js
-│
-└── README.md
-```
+🎯 Job Recommendations
 
----
 
-## 🔥 Core Modules
 
-### Resume Builder
-- Personal Information
-- Education
-- Experience
-- Skills
-- Projects
-- Professional Summary
 
-### Job Recommendation Engine
-- Job role recommendations
-- Resume analysis
-- Career suitability scoring
+CareerPilot fetches real-time job opportunities and intelligently evaluates them against your resume profile. Using Gemini AI, each opportunity is scored based on your skills, experience, and qualifications, ensuring that the most relevant roles appear first.
 
-### Skill Gap Analyzer
-- Missing skills detection
-- Technology recommendations
-- Industry-aligned learning suggestions
+📈 Skill Gap Analysis
 
-### AI Career Advisor
-- Gemini-powered recommendations
-- Career planning assistance
-- Learning guidance
 
----
 
-## ⚙️ Installation
 
-### Clone Repository
+The platform compares your resume with job requirements to identify missing skills and competencies. Based on these gaps, CareerPilot generates personalized learning recommendations and structured roadmaps to accelerate your career growth.
 
-```bash
-git clone https://github.com/your-username/CareerPilot.git
+🛠️ Tech Stack
+Layer	Technologies
+Frontend	React.js, Vite, CSS3
+Backend	Node.js, Express.js
+Database	MongoDB Atlas
+AI	Google Gemini AI
+Authentication	JWT, bcrypt
+Media Storage	ImageKit
+APIs	JSearch API
+🚀 Getting Started
+Prerequisites
+Node.js v18+
+MongoDB Atlas Account
+Google Gemini API Key
+JSearch API Key
+ImageKit Account
+Installation
+1️⃣ Clone the Repository
+git clone https://github.com/Muhammed23B/CareerPilot.git
 cd CareerPilot
-```
-
----
-
-## Backend Setup
-
-```bash
+2️⃣ Backend Setup
 cd server
 npm install
-```
 
-Create a `.env` file:
+Create a .env file inside the server directory:
 
-```env
 PORT=5000
 
 MONGODB_URI=your_mongodb_connection_string
@@ -175,70 +87,81 @@ JWT_SECRET=your_jwt_secret
 
 GEMINI_API_KEY=your_gemini_api_key
 
-IMAGEKIT_PUBLIC_KEY=your_imagekit_public_key
+JSEARCH_API_KEY=your_jsearch_api_key
+
 IMAGEKIT_PRIVATE_KEY=your_imagekit_private_key
-IMAGEKIT_URL_ENDPOINT=your_imagekit_url
-```
+IMAGEKIT_PUBLIC_KEY=your_imagekit_public_key
+IMAGEKIT_URL_ENDPOINT=your_imagekit_url_endpoint
 
-Start backend:
+Start the backend server:
 
-```bash
 npm run dev
-```
-
----
-
-## Frontend Setup
-
-```bash
-cd client
+3️⃣ Frontend Setup
+cd ../client
 npm install
-```
-
-Start frontend:
-
-```bash
 npm run dev
-```
 
-Application:
+Application will run at:
 
-```text
 http://localhost:5173
-```
+📂 Project Structure
+CareerPilot/
+├── assets/
+│   └── Screenshots/
+│
+├── client/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── app/
+│   │   └── configs/
+│   │
+│   └── package.json
+│
+├── server/
+│   ├── configs/
+│   ├── controllers/
+│   ├── middlewares/
+│   ├── models/
+│   ├── routes/
+│   ├── services/
+│   └── server.js
+│
+└── README.md
+🎨 Key Highlights
+AI Resume Analysis
+Resume Enhancement using Gemini AI
+Job Recommendation Engine
+Skill Gap Detection
+Personalized Learning Roadmaps
+Secure User Authentication
+Real-Time Career Insights
+Modern and Responsive UI
+🎯 Use Cases
+Students preparing for placements
+Fresh graduates entering the workforce
+Professionals planning career transitions
+Individuals seeking AI-powered career guidance
+Users looking to improve ATS compatibility
+🔮 Future Enhancements
+ATS Resume Scoring
+AI Cover Letter Generator
+LinkedIn Profile Analysis
+Mock Interview Assistant
+Job Application Tracking
+Advanced Career Analytics
+Personalized Interview Preparation
+👨‍💻 Author
+Mohammed Bilal Ulla Shariff
+🎓 B.E. Computer Science Engineering (AI & ML)
+🏫 The National Institute of Engineering, Mysuru
+💻 Full Stack Developer | AI/ML Engineer
+Connect With Me
+GitHub: https://github.com/Muhammed23B
+LinkedIn: https://www.linkedin.com/in/mohammed-bilal-ulla-shariff
+⭐ Support
 
----
+If you found this project useful, consider giving it a ⭐ on GitHub and sharing it with others.
 
-## 📸 Features Overview
-
-- AI Resume Builder
-- Resume Templates
-- Skill Gap Analysis
-- AI Career Guidance
-- Job Matching Engine
-- Personalized Roadmaps
-- Learning Recommendations
-- User Dashboard
-
----
-
-## 🎯 Use Cases
-
-- Students preparing for placements
-- Fresh graduates
-- Job seekers
-- Career switchers
-- Professionals looking to upskill
-
----
-
-## 🚀 Future Enhancements
-
-- ATS Resume Scoring
-- LinkedIn Profile Analysis
-- Mock Interview Assistant
-- AI Cover Letter Generator
-- Resume Optimization Suggestions
-- Job Application Tracker
-
----
+CareerPilot — Empowering Careers Through AI 🚀
